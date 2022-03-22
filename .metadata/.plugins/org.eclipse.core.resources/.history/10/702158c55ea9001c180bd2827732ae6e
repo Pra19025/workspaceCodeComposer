@@ -1,0 +1,62 @@
+// Según el pinout debe usarse I2CB
+
+#include "driverlib.h"
+#include "I2C_Lib.h"
+#include "device.h"
+
+
+
+struct I2CMsg i2cMsgOut = { 0x04, 3, '1','2'};
+struct I2CMsg i2cMsgOut2 = { 0x28, 1, '5' };
+
+
+void main(void)
+{
+
+    Device_init();
+    Device_initGPIO();
+    i2c_init();
+
+    while (!SysCtl_setClock(
+    SYSCTL_PLL_ENABLE | SYSCTL_SYSDIV(1) | SYSCTL_IMULT(5) | SYSCTL_OSCSRC_XTAL))
+    {
+        SysCtl_resetMCD();
+    }
+
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_I2CB);
+
+    GPIO_setPinConfig(GPIO_34_I2CB_SDA);
+    GPIO_setPadConfig(34, GPIO_PIN_TYPE_PULLUP);
+    GPIO_setQualificationMode(34, GPIO_QUAL_ASYNC); //que no sea síncrono
+
+    GPIO_setPinConfig(GPIO_15_I2CB_SCL);
+    GPIO_setPadConfig(15, GPIO_PIN_TYPE_PULLUP);
+    GPIO_setQualificationMode(15, GPIO_QUAL_ASYNC);
+
+    // para el blink de prueba
+    GPIO_setPadConfig(DEVICE_GPIO_PIN_LED1, GPIO_PIN_TYPE_STD);
+    GPIO_setDirectionMode(DEVICE_GPIO_PIN_LED1, GPIO_DIR_MODE_OUT);
+
+
+    while (1)
+    {
+        int k = 0;
+
+        while (k < 10)
+        {
+            DEVICE_DELAY_US(1000);
+            writeData(&i2cMsgOut);
+            DEVICE_DELAY_US(100000);
+            writeData(&i2cMsgOut2);
+            k++;
+        }
+
+        i2cMsgOut2.slaveAddr = 0x04;    // asi puedo modificar los valores de la estructura
+
+        //El siguiente paso es mandar algo similar al formato de las direcciones
+
+    }
+}
+
+
+

@@ -1,0 +1,1 @@
+"./ComoMaster.obj" "./i2cLib_FIFO_master_slave_interrupt.obj" "./device/device.obj" "./device/f28002x_codestartbranch.obj" "../28002x_generic_ram_lnk.cmd" "C:/ti/C2000Ware_4_00_00_00/driverlib/f28002x/driverlib/ccs/Debug/driverlib.lib" -llibc.a 

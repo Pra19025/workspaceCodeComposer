@@ -1,0 +1,8 @@
+
+**** Build of configuration CPU1_LAUNCHXL_RAM for project Blink ****
+
+"C:\\ti\\ccs1110\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'Blink.out' is up to date.
+
+**** Build Finished ****

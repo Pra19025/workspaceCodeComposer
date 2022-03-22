@@ -1,0 +1,21 @@
+
+**** Build of configuration CPU1_LAUNCHXL_RAM for project I2C_MasterDeESP32 ****
+
+"C:\\ti\\ccs1110\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../ComoMaster.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --idiv_support=idiv0 --tmu_support=tmu0 -Ooff --include_path="C:/Users/noelp/workspace_v11/I2C_MasterDeESP32" --include_path="C:/Users/noelp/workspace_v11/I2C_MasterDeESP32/device" --include_path="C:/ti/C2000Ware_4_00_00_00/driverlib/f28002x/driverlib" --include_path="C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=DEBUG --define=RAM --define=_LAUNCHXL_F280025C --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="ComoMaster.d_raw" --include_path="C:/Users/noelp/workspace_v11/I2C_MasterDeESP32/CPU1_LAUNCHXL_RAM/syscfg"  "../ComoMaster.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'ComoMaster.obj' failed
+"../ComoMaster.c", line 23: error #20: identifier "MAX_I2C_IN_NETWORK" is undefined
+"../ComoMaster.c", line 25: error #20: identifier "MAX_BUFFER_SIZE" is undefined
+"../ComoMaster.c", line 67: warning #225-D: function "I2CBusScan" declared implicitly
+"../ComoMaster.c", line 13: error #237: variable "I2CA" was declared with a never-completed type
+"../ComoMaster.c", line 14: error #237: variable "I2CB" was declared with a never-completed type
+4 errors detected in the compilation of "../ComoMaster.c".
+gmake: *** [ComoMaster.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

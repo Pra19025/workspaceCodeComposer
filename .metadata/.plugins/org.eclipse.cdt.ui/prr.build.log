@@ -1,0 +1,45 @@
+
+**** Build of configuration CPU1_RAM for project prr ****
+
+"C:\\ti\\ccs1110\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../i2cLib_FIFO_master_slave_interrupt.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --idiv_support=idiv0 --tmu_support=tmu0 -Ooff --include_path="C:/Users/noelp/workspace_v11/prr" --include_path="C:/Users/noelp/workspace_v11/prr/device" --include_path="C:/ti/C2000Ware_4_00_00_00/driverlib/f28002x/driverlib" --include_path="C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=DEBUG --define=RAM --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="i2cLib_FIFO_master_slave_interrupt.d_raw" --include_path="C:/Users/noelp/workspace_v11/prr/CPU1_RAM/syscfg"  "../i2cLib_FIFO_master_slave_interrupt.c"
+Finished building: "../i2cLib_FIFO_master_slave_interrupt.c"
+ 
+Building target: "prr.out"
+Invoking: C2000 Linker
+"C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --idiv_support=idiv0 --tmu_support=tmu0 -Ooff --define=DEBUG --define=RAM --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"prr.map" --heap_size=0x100 --stack_size=0x200 --warn_sections -i"C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/lib" -i"C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="prr_linkInfo.xml" --entry_point=code_start --rom_model -o "prr.out" "./i2cLib_FIFO_master_slave_interrupt.obj" "./prueba.obj" "./device/device.obj" "./device/f28002x_codestartbranch.obj" "../28002x_generic_ram_lnk.cmd" "C:/ti/C2000Ware_4_00_00_00/driverlib/f28002x/driverlib/ccs/Debug/driverlib.lib"  -llibc.a 
+<Linking>
+error #10056: symbol "I2CB_RXdata" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "I2CB_TXdata" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "AvailableI2C_slaves" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "I2CA_ControlAddr" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "I2CA_RXdata" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "I2CA_TXdata" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "I2CB_ControlAddr" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "main" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "status" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "I2CB" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+error #10056: symbol "I2CA" redefined: first defined in "./i2cLib_FIFO_master_slave_interrupt.obj"; redefined in "./prueba.obj"
+ 
+ undefined                first referenced                        
+  symbol                      in file                             
+ ---------                ----------------                        
+ I2CBusScan               ./i2cLib_FIFO_master_slave_interrupt.obj
+ I2C_MasterReceiver       ./i2cLib_FIFO_master_slave_interrupt.obj
+ I2C_MasterTransmitter    ./i2cLib_FIFO_master_slave_interrupt.obj
+ Write_Read_TX_RX_FIFO    ./i2cLib_FIFO_master_slave_interrupt.obj
+ handleI2C_ErrorCondition ./i2cLib_FIFO_master_slave_interrupt.obj
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "prr.out" not built
+ 
+>> Compilation failure
+makefile:147: recipe for target 'prr.out' failed
+gmake[1]: *** [prr.out] Error 1
+makefile:143: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****

@@ -1,0 +1,47 @@
+/*
+ * I2C_Lib.h
+ *
+ *  Created on: 16/03/2022
+ *      Author: Noel Prado
+ */
+
+
+#ifndef I2C_LIB_H_
+#define I2C_LIB_H_
+
+// Para los errores
+#define ERROR_BUS_BUSY              0x1000
+#define ERROR_STOP_NOT_READY        0x5555
+#define SUCCESS                     0x0000
+#define MAX_BUFFER_SIZE             20
+#define SUCCESS                     0x0000
+
+// I2C message states for I2CMsg struct
+//
+#define MSG_STATUS_INACTIVE         0x0000 // Message not in use, do not send
+#define MSG_STATUS_SEND_WITHSTOP    0x0010 // Send message with stop bit
+#define MSG_STATUS_WRITE_BUSY       0x0011 // Message sent, wait for stop
+#define MSG_STATUS_SEND_NOSTOP      0x0020 // Send message without stop bit
+#define MSG_STATUS_SEND_NOSTOP_BUSY 0x0021 // Message sent, wait for ARDY
+#define MSG_STATUS_RESTART          0x0022 // Ready to become master-receiver
+#define MSG_STATUS_READ_BUSY        0x0023 // Wait for stop before reading data
+
+
+#include "driverlib.h"
+#include "device.h"
+
+struct I2CMsg
+{
+    uint16_t msgStatus;
+    uint16_t slaveAddr;                  // Slave address tied to the message.
+    uint16_t numBytes;                   // Number of valid bytes in message.
+    uint16_t msgBuffer[MAX_BUFFER_SIZE]; // Array holding message data.
+};
+
+uint16_t writeData(struct I2CMsg *msg);
+void i2c_init(void);
+
+
+
+
+#endif /* I2C_LIB_H_ */

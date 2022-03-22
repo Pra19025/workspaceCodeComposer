@@ -1,0 +1,8 @@
+
+**** Build of configuration CPU1_RAM for project msms ****
+
+"C:\\ti\\ccs1110\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'msms.out' is up to date.
+
+**** Build Finished ****

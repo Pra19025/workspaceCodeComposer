@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MasterESP32/i2c_ex5_master_slave_interrupt.c&apos; to &apos;master.c&apos;" description="Rename resource &apos;i2c_ex5_master_slave_interrupt.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="i2c_ex5_master_slave_interrupt.c" name="master.c" stamp="1646923710540" updateReferences="true"/>
+</session>

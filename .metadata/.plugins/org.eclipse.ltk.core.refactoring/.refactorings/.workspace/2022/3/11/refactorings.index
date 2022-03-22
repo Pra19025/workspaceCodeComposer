@@ -1,0 +1,7 @@
+1646754439437	Rename resource 'I2C-Master'
+1646754918742	Delete resource 'I2C_Master'
+1646923540219	Delete resource 'I2C_MasterDeESP32/i2cLib_FIFO_master_slave_interrupt.c'
+1646923544020	Delete resource 'I2C_MasterDeESP32/i2cLib_FIFO_master_slave_interrupt.h'
+1646923728703	Delete resource 'I2C_MasterDeESP32'
+1646924497439	Delete resource 'MasterESP32/i2cLib_FIFO_master_slave_interrupt.c'
+1646924500654	Delete resource 'MasterESP32/i2cLib_FIFO_master_slave_interrupt.h'

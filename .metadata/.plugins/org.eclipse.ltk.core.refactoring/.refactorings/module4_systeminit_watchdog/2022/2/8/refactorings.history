@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;module4_systeminit_watchdog/empty_driverlib_main.c&apos; to &apos;module4_main.c.c&apos;" description="Rename resource &apos;empty_driverlib_main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="empty_driverlib_main.c" name="module4_main.c.c" stamp="1645132479390" updateReferences="true"/>
+</session>

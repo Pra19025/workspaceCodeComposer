@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PruebaSemana1_I2C/empty_driverlib_main.c&apos; to &apos;ProbandoI2C.c&apos;" description="Rename resource &apos;empty_driverlib_main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="empty_driverlib_main.c" name="ProbandoI2C.c" stamp="1645200411231" updateReferences="true"/>
+</session>
